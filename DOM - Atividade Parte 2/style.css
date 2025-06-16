@@ -1,0 +1,16 @@
+body{
+    font-family:'Blippo', fantasy;
+}
+
+#mensagemErro{
+    color:rgba(255, 0, 0, 0.918);
+    text-align: center;
+    box-shadow: 5px 1px 10px rgb(255, 255, 255);
+    border-radius: 3px;
+    width: fit-content; 
+    margin-top: 10px;
+}
+
+.oculto{
+    display: none;
+}
