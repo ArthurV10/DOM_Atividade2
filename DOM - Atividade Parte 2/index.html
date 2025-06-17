@@ -1,17 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Atividade DOM - Estilo Mangá</title>
     <link rel="stylesheet" href="style.css">
-    <title>Ativdade DOM - Parte 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Questão 1</h1>
-    <div class="questão" id="questão-1">
-        <button id="botaoErro">Mostrar Erro</button>
-        <div id="mensagemErro" class="oculto">Eu vou sumir jájá 😭</div>
+    <div class="manga-container">
+        <header class="manga-header">
+            <h1 class="manga-title">📚 ATIVIDADE DOM - PARTE 2 📚</h1>
+            <div class="manga-subtitle">Uma aventura interativa no mundo do JavaScript!</div>
+        </header>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULO 1 - O Poder dos Erros</h2>
+            <div class="questao" id="questao-1">
+                <button id="botaoErro" class="manga-btn primary">⚡ Mostrar Erro Padrão</button>
+                <div id="mensagemErro" class="oculto manga-message error">Eu vou sumir jájá 😭</div>
+
+                <button id="outroBotaoQ1" class="manga-btn secondary">🔥 Mostrar Erro Personalizado</button>
+                <div id="outraMensagemQ1" class="oculto manga-message"></div>
+            </div>
+        </div>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULO 2 - A Magia do Texto</h2>
+            <div class="questao" id="questao-2">
+                <label for="caixaDeTexto" class="manga-label">✨ Digite o texto mágico:</label>
+                <input type="text" id="caixaDeTexto" class="manga-input">
+                <button id="botaoExibir" class="manga-btn primary">🎯 Exibir</button>
+                <div id="conteudo" class="manga-result"></div>
+                <div id="erroCampoVazioQ2" class="error-message oculto"></div>
+            </div>
+        </div>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULO 3 - Calculadora do Engajamento</h2>
+            <div class="questao" id="questao-3">
+                <h3 class="sub-title">📊 Calculadora de Taxa de Engajamento</h3>
+                <div class="input-group">
+                    <label for="interacoes" class="manga-label">💖 Interações (Curtidas, Comentários, Compartilhamentos):</label>
+                    <input type="number" id="interacoes" class="manga-input">
+                </div>
+                <div class="input-group">
+                    <label for="visualizacoes" class="manga-label">👁️ Visualizações:</label>
+                    <input type="number" id="visualizacoes" class="manga-input">
+                </div>
+                <button id="calcularEngajamento" class="manga-btn primary">⚡ Calcular Taxa de Engajamento</button>
+                <div id="mensagemErroEngajamento" class="error-message oculto"></div>
+                <div id="resultadoEngajamento" class="manga-result"></div>
+            </div>
+        </div>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULO 4 - O Upload Místico</h2>
+            <div class="questao" id="questao-4">
+                <h3 class="sub-title">🖼️ Carregar Imagem</h3>
+                <input type="file" id="uploadImagem" accept="image/*" class="manga-file">
+                <button id="carregarImagemBtn" class="manga-btn primary">📤 Carregar Imagem</button>
+                <div id="resultadoQ4" class="manga-result"></div>
+            </div>
+        </div>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULO 5 - Galeria de Imagens</h2>
+            <div class="questao" id="questao-5">
+                <h3 class="sub-title">🎨 Escolha uma Imagem</h3>
+                <select id="selecionarImagem" class="manga-select">
+                    <option value="">Selecione uma imagem</option>
+                    <option value="https://via.placeholder.com/300/FF0000/FFFFFF?text=Imagem+1">🔴 Imagem 1 (Vermelha)</option>
+                    <option value="https://via.placeholder.com/300/00FF00/FFFFFF?text=Imagem+2">🟢 Imagem 2 (Verde)</option>
+                    <option value="https://via.placeholder.com/300/0000FF/FFFFFF?text=Imagem+3">🔵 Imagem 3 (Azul)</option>
+                </select>
+                <div id="imagemExibidaQ5" class="manga-result"></div>
+            </div>
+        </div>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULO 6 - Redes Sociais do Herói</h2>
+            <div class="questao" id="questao-6">
+                <h3 class="sub-title">📱 Selecione suas Redes Sociais Favoritas</h3>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="facebook" name="redesSociais" value="Facebook">
+                        <label for="facebook">📘 Facebook</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="twitter" name="redesSociais" value="Twitter">
+                        <label for="twitter">🐦 Twitter</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="instagram" name="redesSociais" value="Instagram">
+                        <label for="instagram">📸 Instagram</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="linkedin" name="redesSociais" value="LinkedIn">
+                        <label for="linkedin">💼 LinkedIn</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tiktok" name="redesSociais" value="Tik Tok">
+                        <label for="tiktok">🎵 TikTok</label>
+                    </div>
+                </div>
+                <div class="error-message oculto" id="mensagemErroQ6"></div>
+                <div id="redesSelecionadasQ6" class="manga-result"></div>
+                <button type="button" id="enviarBtnQ6" class="manga-btn primary">🚀 Enviar Seleção</button>
+            </div>
+        </div>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULOS 7, 8 e 9 - As Hashtags Lendárias</h2>
+            <div class="questao" id="questao-7-8-9">
+                <h3 class="sub-title">#️⃣ Gerenciar Hashtags Populares</h3>
+                <div class="hashtag-controls">
+                    <input type="text" id="hashtagInput" placeholder="Digite uma hashtag..." class="manga-input">
+                    <button id="adicionarHashtagBtn" class="manga-btn primary">➕ Adicionar</button>
+                    <button id="removerHashtagBtn" class="manga-btn danger">❌ Remover</button>
+                </div>
+                <div id="mensagemErroHashtagQ789" class="error-message oculto"></div>
+                <select id="listaHashtags" size="5" class="manga-select hashtag-list"></select>
+            </div>
+        </div>
+
+        <div class="questao-panel">
+            <h2 class="chapter-title">CAPÍTULOS 10 e 11 - A Batalha dos Ativos</h2>
+            <div class="questao" id="questao-10-11">
+                <h3 class="sub-title">💰 Mover Ativos Financeiros entre Carteiras</h3>
+                <div class="container">
+                    <div class="carteira-section">
+                        <label for="ativosDisponiveis" class="manga-label">📈 Ativos Disponíveis:</label>
+                        <select id="ativosDisponiveis" size="10" multiple class="manga-select carteira">
+                            <option value="AAPL">🍎 Apple (AAPL)</option>
+                            <option value="GOOGL">🔍 Google (GOOGL)</option>
+                            <option value="AMZN">📦 Amazon (AMZN)</option>
+                            <option value="MSFT">💻 Microsoft (MSFT)</option>
+                            <option value="TSLA">⚡ Tesla (TSLA)</option>
+                            <option value="BRK.B">💎 Berkshire Hathaway (BRK.B)</option>
+                            <option value="FB">👥 Meta (FB)</option>
+                            <option value="V">💳 Visa (V)</option>
+                            <option value="JNJ">🏥 Johnson & Johnson (JNJ)</option>
+                            <option value="WMT">🛒 Walmart (WMT)</option>
+                        </select>
+                    </div>
+                    <div class="buttons">
+                        <button id="moverParaDireitaBtn" class="manga-btn move-btn">➡️</button>
+                        <button id="moverParaEsquerdaBtn" class="manga-btn move-btn">⬅️</button>
+                    </div>
+                    <div class="carteira-section">
+                        <label for="carteiraInvestimentos" class="manga-label">💼 Carteira de Investimentos:</label>
+                        <select id="carteiraInvestimentos" size="10" multiple class="manga-select carteira"></select>
+                    </div>
+                </div>
+                <div id="validationMessageQ1011" class="error-message oculto"></div>
+            </div>
+        </div>
     </div>
-    <script src = "script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
